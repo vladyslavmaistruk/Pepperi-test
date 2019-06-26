@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #f8f6f4;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 5px;
+}
+h3 {
+    margin-left: 2%;
+}
+
+table {
+    width: 60%;
+    height: auto;
+    font-size: 1rem;
+    border: 1px solid;
+    margin-left: 2%;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header {
+    width: 100%;
+    background-color: black;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+
+.container {
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+
+}
+
+.label {
+    display: block;
+    font-size: 1.2rem;
+    margin-left: 2%;
+}
+
+.btn {
+    display: inline-block;
+    /*display: block;*/
+    text-align: center;
+    text-decoration: none;
+
+    margin: 2px 0;
+
+    border: solid 1px transparent;
+    border-radius: 4px;
+
+    padding: 0.4em 1em;
+
+    /* убедитесь, что достаточно контраста! */
+    color: #ffffff;
+    background-color: #9555af;
+
+}
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+.btn:hover {
+    color: #9050aa;
+    border-color: currentColor;
+    background-color: white;
+}
+.container-list {
+    display: flex;
+}
+
+.btn-group {
+    margin-left: 10%;
+}
+
+.btn-group button {
+    display: block;
+    margin-bottom: 25%;
+}
+
+
+
+#textbox {
+    width: 60%;
+    height: 25px;
+    font-size: 1rem;
+    margin-left: 2%;
+    margin-right: 10%;
+    margin-top: 1%;
+    border-radius: 4px;
+}
+footer {
+    background-color: black;
+    height: 40px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    color: white;
+    /*font-size: 1rem;*/
+    text-align: right;
+}
+
+@media all and (max-width: 425px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
