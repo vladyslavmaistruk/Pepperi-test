@@ -1,0 +1,48 @@
+.appending {
+    grid-area: appending;
+    position: relative;
+    padding-top: 20px;
+}
+
+
+/* Reset default button styles */
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+/* Remove the outline when the button is pressed */
+button:focus {
+    outline: none;
+}
+
+/* button custom component */
+.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-bottom: solid 1px transparent;
+    padding: 0.0em 0.3em;
+    color: #dbdbdb;
+    background-color: transparent;
+}
+
+.btn:hover {
+    color: white;
+    border-bottom: solid 1px white;
+    transition: 0.3s ease all;
+
+}
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+@media all and (max-width: 768px) {
+    .appending > button {
+        margin-left: 80%;
+    }
+}
