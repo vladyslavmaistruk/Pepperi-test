@@ -1,0 +1,66 @@
+.appending {
+    grid-area: appending;
+    position: relative;
+    padding-top: 20px;
+}
+
+
+/* Reset default button styles */
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+/* Remove the outline when the button is pressed */
+button:focus {
+    outline: none;
+}
+
+/* button custom component */
+.btn {
+    /*display: inline-block;*/
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    /*margin: 2px 0;.*/
+    /* невидимая граница (понадобится для цвета при наведении/фокусе) */
+    border-bottom: solid 1px transparent;
+    /*border: solid 1px transparent;*/
+    /*border-radius: 4px;*/
+    /* размер строится из текста и отступов (без width/height) */
+    padding: 0.0em 0.3em;
+    /* убедитесь, что достаточно контраста! */
+    color: #dbdbdb;
+    /*background-color: #000000;*/
+    background-color: transparent;
+}
+
+/* swap around colors */
+.btn:hover {
+    /*color: #000000;*/
+    /*border-color: currentColor;*/
+    /*background-color: white;*/
+    color: white;
+    border-bottom: solid 1px white;
+    /*border: solid 1px white;*/
+    /*font-size: 1.21rem;*/
+    /*margin-top: 46px;*/
+    transition: 0.3s ease all;
+
+}
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+@media all and (max-width: 768px) {
+    .appending {
+        /*padding-top: 0;*/
+    }
+    .appending > button {
+        margin-left: 80%;
+    }
+}
