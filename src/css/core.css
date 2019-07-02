@@ -24,9 +24,6 @@ body {
     grid-row-gap: 2rem;
     color: white;
 }
-.wrapper > div {
-    /*background-color: #313131;*/
-}
 
 @media all and (max-width: 1440px) {
     html, body {

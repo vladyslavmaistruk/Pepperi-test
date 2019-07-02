@@ -2,7 +2,6 @@
     grid-area: control;
     position: relative;
 }
-
 .control > button {
     margin-top: 30px;
 }
@@ -22,6 +21,5 @@
     .control :first-child {
         margin-top: 0;
         margin-left: 0;
-
     }
 }
