@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="src/css/style.css" type="text/css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="container">
         <div class="header">
             <h1>Test Task</h1>
         </div>
@@ -17,21 +17,24 @@
             <label>Name/Value Pair</label>
         </div>
         <div class="appending">
-            <button class="btn" type="button">Add</button>
+            <button class="btn" type="button" id="add">Add</button>
         </div>
         <div class="list">
             <div class="title">Name/Value List</div>
             <table class="table"></table>
         </div>
         <div class="control">
-            <button class="btn" type="button">Sort by Name</button>
-            <button class="btn" type="button">Sort by Value</button>
-            <button class="btn" type="button">Delete</button>
-            <button class="btn" type="button">XML</button>
+            <button class="btn" type="button" id="sort-by-name">Sort by Name</button>
+            <button class="btn" type="button" id="sort-by-value">Sort by Value</button>
+            <button class="btn" type="button" id="delete">Delete</button>
+            <button class="btn" type="button" id="xml">XML</button>
         </div>
         <div class="footer">
             <span>&copy Vladyslav Maistruk</span>
         </div>
     </div>
+    <script src="./src/js/list.js" type="text/javascript"></script>
+    <script src="./src/js/app.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
 </body>
 </html>

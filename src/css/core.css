@@ -11,7 +11,7 @@ body {
     background-size: cover;
     font-family: Open sans-serif;
 }
-.wrapper {
+.container {
     min-height: 100vh;
     display: grid;
     grid-template-areas:
@@ -35,7 +35,7 @@ body {
     html, body {
         font-size: 14px;
     }
-    .wrapper {
+    .container {
         grid-template-areas:
             "header"
             "textbox"
