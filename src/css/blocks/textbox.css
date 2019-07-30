@@ -30,7 +30,7 @@ label {
 input:focus ~ label, input:valid ~ label {
     top: -15px;
     font-size: 0.9rem;
-    color: white;
+    color: var(--color-active);
 }
 .bar {
     position: relative;
@@ -44,7 +44,7 @@ input:focus ~ label, input:valid ~ label {
     width: 0;
     bottom: 0;
     position: absolute;
-    background-color: white;
+    background-color: var(--color-active);
     transition: 0.2s ease all;
 }
 .bar:before {
@@ -57,4 +57,8 @@ input:focus ~ label, input:valid ~ label {
 input:focus ~ .bar:before,
 input:focus ~ .bar:after {
     width: 50%;
+}
+.error-message {
+    margin-left: 10px;
+    color: #ff979c
 }

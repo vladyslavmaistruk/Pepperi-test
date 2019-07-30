@@ -6,20 +6,40 @@ class App {
     this.startApp();
   }
   
-  startApp() {
-    const textField = document.querySelector('input');
-    const table = document.querySelector('table');
-    const container = document.querySelector('.container');
+  static root = document.documentElement;             // root is element to access to CCS variables
+  static container = document.querySelector('.container');  // container is a wrapper of entire markup
+  static textField = document.querySelector('input');
+  static messageElement = document.querySelector('.error-message');
+  static table = document.querySelector('table');
+  static xmlList = document.querySelector('.xml-container');
+  static xmlContent = document.querySelector('.content');
   
-    const list = new List(table);
+  // static regexp = /^[A-Za-z0-9]+\s*=\s*[A-Za-z0-9]+$/;
+  static regexp = /^[A-Za-z0-9]{1,10}\s*=\s*[A-Za-z0-9]{1,10}$/;
+  
+  startApp() {
     
-    container.addEventListener('click', event => {
+    // const textField = document.querySelector('input');
+    // const root = document.documentElement;
+    // const table = document.querySelector('table');
+    // const container = document.querySelector('.container');
+    // const regexp = /^[A-Za-z0-9]+\s*=\s*[A-Za-z0-9]+$/;
+  
+    const validator = new Validator(App.regexp, App.root, App.messageElement);
+    const list = new List(App.table);
+    
+    App.textField.addEventListener('input', validator.applyValidationStyle.bind(validator));
+    App.textField.addEventListener('focus', validator.applyDefaultStyle.bind(validator));
+  
+    App.container.addEventListener('click', event => {
       const buttonName = event.target.id;
       
       switch (buttonName) {
         case 'add':
-          list.add(textField.value, '=');
-          textField.value = '';
+          if(validator.verifyData(App.textField.value)) {
+            list.add(App.textField.value, '=');             // '=' is a separator for <name> = <value> pair
+            App.textField.value = '';
+          }
           break;
         case 'sort-by-name':
           list.sortByName();
@@ -31,7 +51,11 @@ class App {
           list.deleteList();
           break;
         case 'xml':
-          list.showAsXML();
+          App.xmlList.style.visibility = 'visible';
+          App.xmlContent.innerText = list.showAsXML();
+          break;
+        case 'close-popup':
+          App.xmlList.style.visibility = 'hidden';
           break;
       }
     });

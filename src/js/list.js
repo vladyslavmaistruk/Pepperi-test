@@ -7,7 +7,10 @@ class List {
   
   add(data, separator) {
     const [name, value] = [...data.split(separator)];
-    this.collection.push({name: name, value: value});
+    this.collection.push({
+      name: name.trim(),
+      value: value.trim()
+    });
     this.display();
   }
   
@@ -27,7 +30,11 @@ class List {
   }
   
   showAsXML() {
-    
+    const stringXML = this.collection
+      .reduce((result, item) => {
+        return result + `<entry>\n<name>${item.name}</name>\n<value>${item.value}</value>\n</entry>\n`;
+      }, '');
+    return `<?xml version="1.0" encoding="UTF-8"?>\n<list>\n${stringXML}</list>`;
   }
   
   display() {
