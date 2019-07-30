@@ -12,6 +12,7 @@
 @media all and (max-width: 768px) {
     .control {
         text-align: center;
+        padding-top: 20px;
     }
     .control > button {
         display: inline-block;

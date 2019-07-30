@@ -11,7 +11,7 @@ body {
     background-size: cover;
     font-family: Open sans-serif;
 }
-.wrapper {
+.container {
     min-height: 100vh;
     display: grid;
     grid-template-areas:
@@ -19,7 +19,7 @@ body {
         "textbox appending"
         "list control"
         "footer footer";
-    grid-template-rows: 80px 20% 1fr 30px;
+    grid-template-rows: 80px 20% 1fr 40px;
     grid-template-columns: 3fr 2fr;
     grid-row-gap: 2rem;
     color: white;
@@ -35,7 +35,7 @@ body {
     html, body {
         font-size: 14px;
     }
-    .wrapper {
+    .container {
         grid-template-areas:
             "header"
             "textbox"
@@ -43,7 +43,7 @@ body {
             "list"
             "control"
             "footer";
-        grid-template-rows: 70px 10% 20% auto auto 30px;
+        grid-template-rows: 70px 10% 20% auto auto 40px;
         grid-template-columns: 1fr;
         grid-row-gap: 0;
     }
