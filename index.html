@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepperi Test</title>
+    <link rel="stylesheet" href="src/css/style.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Test Task</h1>
+        </header>
+        <div class="textbox">
+            <input type="text" required>
+            <span class="bar"></span>
+            <label>Name/Value Pair</label>
+            <div class="error-message"></div>
+        </div>
+        <div class="appending">
+            <button class="btn" type="button" id="add">Add</button>
+        </div>
+        <div class="list">
+            <div class="title">Name/Value List</div>
+            <table></table>
+            <div class="xml-container">
+                <div class="popup">
+                    <h3>XML</h3>
+                    <a class="close" id="close-popup" href="#">&times;</a>
+                    <div class="content"></div>
+                </div>
+            </div>
+        </div>
+        <div class="control">
+            <button class="btn" type="button" id="sort-by-name">Sort by Name</button>
+            <button class="btn" type="button" id="sort-by-value">Sort by Value</button>
+            <button class="btn" type="button" id="delete">Delete</button>
+            <button class="btn" type="button" id="xml">XML</button>
+        </div>
+        <footer>
+            <span>&copy Vladyslav Maistruk</span>
+        </footer>
+    </div>
+    <script src="src/js/validator.js" type="text/javascript"></script>
+    <script src="./src/js/list.js" type="text/javascript"></script>
+    <script src="./src/js/app.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>

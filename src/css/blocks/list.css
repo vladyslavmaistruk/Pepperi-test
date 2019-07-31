@@ -1,0 +1,22 @@
+.list {
+    grid-area: list;
+    padding-left: 10%;
+}
+.title {
+    border-bottom: 1px solid #dbdbdb;
+    width: 82%;
+    padding-left: 10px;
+    color: #dbdbdb;
+    font-size: 1.2rem;
+}
+.title:hover {
+    border-bottom: 1px solid white;
+    color: white;
+    transition: 0.2s ease all;
+}
+table {
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+

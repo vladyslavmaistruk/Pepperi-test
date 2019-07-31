@@ -1,0 +1,56 @@
+/* Pop-up window style */
+.xml-container {
+    position: absolute;
+    max-width: 80%;
+    width: 30%;
+    left: 35%;
+    top: 30%;
+    margin: auto;
+    background-color: #373737;
+    /*border: 1px solid black;*/
+    visibility: hidden;
+    display: inline-block;
+}
+.popup {
+    position: relative;
+    /*padding: 10px;*/
+}
+.popup h3 {
+    /*background-color: black;*/
+    margin-left: 10%;
+}
+.popup .close{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 1.4rem;
+    color: #dbdbdb;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 100ms;
+}
+.popup .close:hover {
+    color: white;
+    transform: scale(1.2);
+}
+.popup .content {
+    background-color: #dbdbdb;
+    color: black;
+    padding: 10px;
+    max-height: 60%;
+    overflow: auto;
+}
+
+@media all and (max-width: 1024px) {
+    .xml-container {
+        width: 40%;
+        left: 30%;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .xml-container {
+        width: 60%;
+        left: 20%;
+    }
+}
