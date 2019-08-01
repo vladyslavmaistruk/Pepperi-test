@@ -1,0 +1,36 @@
+{
+  "name": "pepperi-test",
+  "version": "1.0.0",
+  "description": "Task list",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladyslavmaistruk/Pepperi-test.git"
+  },
+  "keywords": [
+    "pepperi"
+  ],
+  "author": "Vladyslav Maistruk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladyslavmaistruk/Pepperi-test/issues"
+  },
+  "homepage": "https://github.com/vladyslavmaistruk/Pepperi-test#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

@@ -42,3 +42,5 @@ class Validator {
     this.messageElement.innerText = '';
   }
 }
+
+export default Validator;

@@ -1,4 +1,5 @@
-// import List from './list';
+import List from './list';
+import Validator from './validator';
 
 
 class App {
@@ -6,24 +7,20 @@ class App {
     this.startApp();
   }
   
-  static root = document.documentElement;             // root is element to access to CCS variables
-  static container = document.querySelector('.container');  // container is a wrapper of entire markup
+  static root = document.documentElement;               // root is element to access to CCS variables
+  static container = document.querySelector('.container');   // container is a wrapper of entire markup
   static textField = document.querySelector('input');
   static messageElement = document.querySelector('.error-message');
   static table = document.querySelector('table');
   static xmlList = document.querySelector('.xml-container');
   static xmlContent = document.querySelector('.content');
   
-  // static regexp = /^[A-Za-z0-9]+\s*=\s*[A-Za-z0-9]+$/;
-  static regexp = /^[A-Za-z0-9]{1,10}\s*=\s*[A-Za-z0-9]{1,10}$/;
+  // static regexp = /^[A-Za-z0-9]+\s*=\s*[A-Za-z0-9]+$/;         // Pair should be at format name = value
+  
+  static regexp = /^[A-Za-z0-9]{1,10}\s*=\s*[A-Za-z0-9]{1,10}$/;  // name and value can't contain more
+                                                                  // then 10 characters
   
   startApp() {
-    
-    // const textField = document.querySelector('input');
-    // const root = document.documentElement;
-    // const table = document.querySelector('table');
-    // const container = document.querySelector('.container');
-    // const regexp = /^[A-Za-z0-9]+\s*=\s*[A-Za-z0-9]+$/;
   
     const validator = new Validator(App.regexp, App.root, App.messageElement);
     const list = new List(App.table);
@@ -62,6 +59,6 @@ class App {
   }
 }
 
-// export default App;
+export default App;
 
 
