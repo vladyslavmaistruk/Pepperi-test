@@ -1,5 +1,3 @@
-// import List from './list';
-
 
 class App {
   constructor() {
@@ -18,12 +16,6 @@ class App {
   static regexp = /^[A-Za-z0-9]{1,10}\s*=\s*[A-Za-z0-9]{1,10}$/;
   
   startApp() {
-    
-    // const textField = document.querySelector('input');
-    // const root = document.documentElement;
-    // const table = document.querySelector('table');
-    // const container = document.querySelector('.container');
-    // const regexp = /^[A-Za-z0-9]+\s*=\s*[A-Za-z0-9]+$/;
   
     const validator = new Validator(App.regexp, App.root, App.messageElement);
     const list = new List(App.table);
@@ -61,7 +53,3 @@ class App {
     });
   }
 }
-
-// export default App;
-
-
